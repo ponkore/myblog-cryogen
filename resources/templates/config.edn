@@ -13,10 +13,10 @@
  :sass-src           nil
  :sass-dest          nil
  :theme              "blue"
- :resources          ["img"]
+ :resources          ["img" "css" "js"]
  :keep-files         [".git" ".gitignore" "misaki" "favicon.ico"]
- :disqus?            false
- :disqus-shortname   ""
+ :disqus?            true
+ :disqus-shortname   "ponkoresblog"
  :ignored-files      [#"\.#.*" #".*\.swp$"]
  :posts-per-page     5
  :blocks-per-preview 2
