@@ -13,7 +13,7 @@
 </div>
 {% if post.tags|not-empty %}
 <div id="post-tags">
-    <b><i class="fa fa-tags"></i> </b>
+    <b><i class="fi-pricetag-multiple"></i> </b>
     {% for tag in post.tags %}
     <a href="{{tag.uri}}" class="btn btn-default btn-xs">{{tag.name}}</a>
     {% endfor %}

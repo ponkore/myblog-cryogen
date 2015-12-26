@@ -13,7 +13,7 @@
  :sass-src           nil
  :sass-dest          nil
  :theme              "blue"
- :resources          ["img" "css" "js"]
+ :resources          ["img" "css" "js" "fonts"]
  :keep-files         [".git" ".gitignore" "misaki" "favicon.ico"]
  :disqus?            true
  :disqus-shortname   "ponkoresblog"
