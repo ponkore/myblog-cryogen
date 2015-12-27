@@ -17,7 +17,7 @@
  :keep-files         [".git" ".gitignore" "misaki"]
  :disqus?            true
  :disqus-shortname   "ponkoresblog"
- :ignored-files      [#"\.#.*" #".*\.swp$" #".*\.css\.map" #".*\.scss"]
+ :ignored-files      [#"\.#.*" #".*\.swp$" #".*\.css\.map"]
  :posts-per-page     5
  :blocks-per-preview 2
  :previews?          false}
