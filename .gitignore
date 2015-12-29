@@ -12,3 +12,4 @@ pom.xml.asc
 /resources/public
 *.css.map
 .sass-cache
+.nrepl-port

@@ -10,14 +10,14 @@
  ;:rss-filters        ["cryogen"]
  :recent-posts       3
  :post-date-format   "yyyy-MM-dd"
- :sass-src           nil
+ :sass-src           "themes/blue/css"
  :sass-dest          nil
  :theme              "blue"
  :resources          ["img" "fonts"]
  :keep-files         [".git" ".gitignore" "misaki"]
  :disqus?            true
  :disqus-shortname   "ponkoresblog"
- :ignored-files      [#"\.#.*" #".*\.swp$" #".*\.css\.map"]
+ :ignored-files      [#"\.#.*" #".*\.swp$" #".*\.css\.map$" #"\.sass-cache"]
  :posts-per-page     5
  :blocks-per-preview 2
  :previews?          false}
