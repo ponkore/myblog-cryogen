@@ -10,6 +10,7 @@
  ;:rss-filters        ["cryogen"]
  :recent-posts       3
  :post-date-format   "yyyy-MM-dd"
+ :archive-group-format "yyyy年MM月"
  :sass-src           "themes/blue/css"
  :sass-dest          nil
  :theme              "blue"
@@ -20,4 +21,4 @@
  :ignored-files      [#"\.#.*" #".*\.swp$" #".*\.css\.map$" #"\.sass-cache"]
  :posts-per-page     5
  :blocks-per-preview 2
- :previews?          false}
+ :previews?          true}
