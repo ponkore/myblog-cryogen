@@ -1,4 +1,4 @@
-{:site-title         "(カッコの中の小人)"
+{:site-title         "(a little man in parenthesis)"
  :author             "ponkore"
  :description        "主にProgrammingなネタ集です。"
  :site-url           "https://ponkore.github.io/"
@@ -11,14 +11,14 @@
  :recent-posts       3
  :post-date-format   "yyyy-MM-dd"
  :archive-group-format "yyyy年MM月"
- :sass-src           "themes/blue/css"
+ :sass-src           "themes/matcha-green/css"
  :sass-dest          nil
- :theme              "blue"
+ :theme              "matcha-green"
  :resources          ["img" "fonts"]
  :keep-files         [".git" ".gitignore" "misaki"]
  :disqus?            true
  :disqus-shortname   "ponkoresblog"
- :ignored-files      [#"\.#.*" #".*\.swp$" #".*\.css\.map$" #"\.sass-cache"]
+ :ignored-files      [#"\.#.*" #".*\.swp$" #".*\.css\.map$"]
  :posts-per-page     5
  :blocks-per-preview 2
  :previews?          true}
