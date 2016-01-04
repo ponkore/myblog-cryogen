@@ -3,8 +3,27 @@ $main-color-hover: desaturate(#27ae60, 10%);
 $accent-color: adjust-hue($main-color, 200);
 $base-color: #f2f2f2;
 $text-color: #fff;
+$text-color-hover: #fff;
+$pre-code-background-color: #f7f9fd;
+$code-color: #428bca;
 $shadow: 2px;
 $shadow2: $shadow * 2;
+$content-margin-top: 90px;
+
+/*HEADROOM*/
+.headroom {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: all .2s ease-in-out;
+}
+.headroom--unpinned {
+  top: -100px;
+}
+.headroom--pinned {
+  top: 0;
+}
 
 h1, h2 {
   color: $text-color;
@@ -12,6 +31,7 @@ h1, h2 {
   line-height: 1.4;
   margin-left: -10px;
   padding-left: 5px;
+  margin-top: 0px;
 }
 
 h3, h4, h5, h6 {
@@ -41,6 +61,7 @@ i {
 }
 
 .navbar {
+    z-index: 1;
     border-radius: 0;
     box-shadow: 0 0 0 0,0 $shadow $shadow2 rgba(34,34,34,0.3);
 }
@@ -50,22 +71,22 @@ i {
     border: none;
 
     .navbar-brand {
-      color: #fff;
-      &.hover {
-        color: #fff;
+      color: $text-color;
+      &:hover {
+        color: $text-color-hover;
       }
     }
 
     .navbar-nav {
         li a {
-          color: #fff;
-          &.hover {
-            color: #fff;
+          color: $text-color;
+          &:hover {
+            color: $text-color-hover;
             background-color: $main-color-hover;
           }
         }
         .active a {
-          color: #fff;
+          color: $text-color;
           background-color: $main-color-hover;
         }
     }
@@ -74,37 +95,48 @@ i {
         .icon-bar {
           background-color: #fff;
         }
-        &.hover {
+        &:hover {
           background-color: $main-color-hover;
         }
     }
 }
 
-#sidebar {
+@mixin round-shadow-box {
     background-color: #fff;
     border-radius: 3px;
     box-shadow: 0 0 0 0,0 $shadow $shadow2 rgba(34,34,34,0.1);
+}
+
+#sidebar {
+    @include round-shadow-box;
     margin-left: 15px;
-    margin-top: 30px;
+    margin-top: $content-margin-top;
     padding: 15px;
 }
 
 #content {
-    background-color: #fff;
-    border-radius: 3px;
-    box-shadow: 0 0 0 0,0 $shadow $shadow2 rgba(34,34,34,0.1);
-    margin-top: 20px;
+    @include round-shadow-box;
+    margin-top: $content-margin-top;
+}
+
+.toc {
+    margin-top: 0px;
+}
+
+.post-content {
 }
 
 footer {
     font-size: 14px;
     text-align: center;
-    padding-top: 75px;
+    padding-top: 45px;
     padding-bottom: 30px;
 }
 
 #post-tags {
-    margin-top: 30px;
+    /* margin-top: 30px; */
+    display: inline-block;
+    float: right;
 }
 
 #prev-next {
@@ -112,12 +144,20 @@ footer {
 }
 
 .btn-next-prev {
-    color: #fff;
+    color: $text-color;
     background-color: $main-color;
+    &:hover {
+      color: $text-color-hover;
+      background-color: $main-color-hover;
+    }
+}
+
+.read-more {
+    font-size: 14px;
 }
 
 .post-header {
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     h2 {
         font-size: 32px;
     }
@@ -125,7 +165,7 @@ footer {
 
 #post-meta {
     font-size: 14px;
-    color: rgba(0,0,0,0.4)
+    color: rgba(0,0,0,0.4);
 }
 
 #page-header {
@@ -144,11 +184,11 @@ pre {
 }
 
 code {
-    color: #428bca;
+    color: $code-color;
 }
 
 pre, code, .hljs {
-    background-color: #f7f9fd;
+    background-color: $pre-code-background-color;
 }
 
 @media (min-width: 768px) {
@@ -163,8 +203,8 @@ pre, code, .hljs {
         padding: 25px 15px;
     }
     #content{
-        margin-top: 30px;
-        padding: 30px 40px;
+        margin-top: $content-margin-top;
+        padding: 20px 40px;
     }
 }
 
