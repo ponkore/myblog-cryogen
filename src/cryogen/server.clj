@@ -6,8 +6,12 @@
             [cryogen-core.plugins :refer [load-plugins]]
             [cryogen-core.compiler :refer [compile-assets-timed read-config]]))
 
+(defonce plugin-loaded (atom nil))
+
 (defn init []
-  (load-plugins)
+  (when-not @plugin-loaded
+    (load-plugins)
+    (reset! plugin-loaded true))
   (compile-assets-timed)
   (let [ignored-files (-> (read-config) :ignored-files)]
     (start-watcher! "resources/templates" ignored-files compile-assets-timed)))
