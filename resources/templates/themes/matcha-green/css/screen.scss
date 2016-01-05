@@ -52,7 +52,7 @@ i {
 }
 
 .container {
-    max-width: 1000px;
+    /* max-width: 1170px; */
 }
 
 .right {
@@ -109,9 +109,12 @@ i {
 
 #sidebar {
     @include round-shadow-box;
-    margin-left: 15px;
+    margin-left: 0px;
     margin-top: $content-margin-top;
-    padding: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 10px;
 }
 
 #content {
@@ -203,7 +206,7 @@ pre, code, .hljs {
         padding: 25px 15px;
     }
     #content{
-        margin-top: $content-margin-top;
+      margin-top: $content-margin-top;
         padding: 20px 40px;
     }
 }
@@ -222,4 +225,18 @@ pre, code, .hljs {
         float:left;
         text-align: left;
     }
+}
+
+// social buttons
+.social-area {
+  width: 100%;
+  min-height: 190px;
+  background: $base-color;
+  padding: 1.5em 0;
+}
+
+@media screen and ( min-width:480px ) {
+  .social-area {
+    min-height: 119px;
+  }
 }
