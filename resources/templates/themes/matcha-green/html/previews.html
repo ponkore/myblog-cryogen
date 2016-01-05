@@ -3,7 +3,6 @@
 <div id="post">
     {% for post in posts %}
     <div class="post-header">
-        <!-- <h2>{{post.title}}</h2> -->
         <div id="post-meta" class="row">
             <span class="col-lg-6"><i class="fi-clock"></i>{{post.date|date:longDate}}</span>
             {% if post.tags|not-empty %}
@@ -18,11 +17,13 @@
             <span class="col-lg-6 right">By: {{post.author}}</span>
             {% endif %}
         </div>
+        <h2>{{post.title}}</h2>
     </div>
     <div class="post-content">
         {{post.content|safe}}
     </div>
     <a href="{{post.uri}}" class="read-more">...続きを読む</a>
+    {% include "/html/social.html" %}
     <hr>
     {% endfor %}
 
