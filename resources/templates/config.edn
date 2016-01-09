@@ -3,8 +3,10 @@
  :description        "主にProgrammingなネタ集です。"
  :site-url           "https://ponkore.github.io/"
  :post-root          "posts"
- :tag-root           "tags"
  :page-root          "pages"
+ :post-root-uri      nil
+ :page-root-uri      nil
+ :tag-root-uri       "tags"
  :blog-prefix        nil ;; "/blog"
  :rss-name           "atom.xml"
  ;:rss-filters        ["cryogen"]
