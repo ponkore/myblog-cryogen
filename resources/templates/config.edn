@@ -16,7 +16,7 @@
  :sass-src           "themes/matcha-green/css"
  :sass-dest          nil
  :theme              "matcha-green"
- :resources          ["img" "fonts"]
+ :resources          ["img"]
  :keep-files         [".git" ".gitignore" "misaki"]
  :disqus?            true
  :disqus-shortname   "ponkoresblog"
